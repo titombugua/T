@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="container-fluid bg-1 text-center">
+	<div id="blog">
+		<h3 class="margin"> BLOG </h3>
+		<hr class="border-grey" style="margin:auto;width:20%;color:#000"><br>
+		<form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			<p>Are you sure you want to delete "{{ object }}"?</p>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-success">Confirm</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+</div>
+{% endblock %}

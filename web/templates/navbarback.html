@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>{% block head %}
+    <link rel="icon" href="{% static 'brand/favicon.ico' %}">
+    <title>{% block title %} Tito Mbugua {% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"> {% block mediumish %}
+    <link href="{% static 'css/mediumishh.css' %}" rel="stylesheet">{% endblock %}
+    <!-- <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}"> -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Poppins|Poiret+One" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/reset.css'%}">
+    <!-- CSS reset -->
+    <!-- Resource style -->
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <!-- Modernizr -->
+    <!-- <script type="text/javascript">
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    $(".zoom-me img").css({
+        width: (100 - scroll / 5) + "%",
+        top: -(scroll / 10) + "%",
+        //Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
+        "-webkit-filter": "blur(" - (scroll / 200) + "px)",
+        filter: "blur(" - (scroll / 200) + "px)"
+    });
+});
+</script> -->
+    {% endblock %}
+</head>
+
+<body class="{% block body %} web {% endblock %}" data-spy="scroll" data-target="#navbarSupportedContent" data-offset="100">
+    <div id="preloader">
+        <div id="status"></div>
+    </div>
+    {% block nav_bar %}
+    <nav class="navbar navbar-expand-sm fixed-top sticky-top navbar-light bg-transparent mediumnavigation">
+        <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+
+</button> -->
+        <a class="navbar-brand mx-auto" href="{% url 'web:homepage' %}#portfolio"><img src="{% static 'brand/favicon.png' %}" alt="T"><span class="sr-only">(current)</span></a>
+        <div class="container">
+            <!-- Begin Logo -->
+            {% block usertools %}
+            <!-- End Logo -->
+            <ul class="navbar-nav flex-row mx-auto">
+                <li class="nav-item active"><a class="nav-link pr-2" href="{% url 'web:homepage' %}"> <span class="sr-only">(current)</span></a></li>
+                <li class="nav-item "><a class="nav-link pr-2" href="{% url 'web:about-me' %}">About Me<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item "><a class="nav-link pr-2" href="{% url 'web:homepage' %}#resume">Resume <span class="sr-only">(current)</span></a></li>
+            </ul>
+            <ul class="navbar-nav flex-row mx-auto">
+                <li class="nav-item "><a class="nav-link pr-2" href="{% url 'web:blog' %}">Blog <span class="sr-only">(current)</span></a></li>
+                <li class="nav-item "><a class="nav-link pr-2" href="{% url 'web:homepage' %}#contact">Contact <span class="sr-only">(current)</span></a></li>
+                <!-- <li class="nav-item dropdown"><a class="nav-link pr-2 dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li> -->
+            </ul>
+            <!-- End Menu -->
+            <!-- Begin Search -->
+            <!-- End Search -->
+        </div>
+        {% endblock %}
+        </div>
+    </nav>

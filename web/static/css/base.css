@@ -1,0 +1,20 @@
+/*NAVIGATION BAR*/
+
+.navbar {
+	margin-top: 25px;
+	background: #fff!important;
+	border: none !important;
+	padding: 10px;
+}
+#blog {
+	padding: 50px;
+
+}
+.blog-content {
+	/*color: red !important;*/
+	margin-left:  300px !important;
+}
+
+.navbar li > a {
+  color: #000!important;
+}

@@ -1,0 +1,12 @@
+<div class="container-fluid">
+    <div class="section-title">
+        <h2><span>GALLERY</span></h2>
+    </div>
+    <div class="row">
+        {% for picture in pictures %}
+        <div class="col-lg-4" style="background-image: url({{picture.picture.url}}); height: 25rem;background-size: cover;
+    background-position: center;">
+        </div>
+        {%endfor%}
+    </div>
+</div>

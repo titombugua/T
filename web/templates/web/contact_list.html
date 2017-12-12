@@ -1,0 +1,78 @@
+{% extends 'resume_list.html' %} {% load static %}
+
+<body class="{% block body %} blog {% endblock %}">
+    <!-- Begin Nav
+================================================== -->
+    {% block mediumish %}
+    <link href="{% static 'css/mediumishh.css' %}" rel="stylesheet">{% endblock %} {% block nav_bar %}
+    <!-- End Menu -->
+    <!-- Begin Search -->
+    {{block.super}}
+    <!-- <li>
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2 " type="text " placeholder="Search ">
+        <span class="search-icon "><svg class="svgIcon-use " width="25 " height="25 " viewbox="0 0 25 25 "><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z "></path></svg></span>
+    </form>
+</li> -->
+    <!-- End Search -->
+    {%endblock%} {% block card_content %}
+    <!-- End Nav
+================================================== -->
+    <!-- Begin Site Title
+================================================== -->
+    <!-- End Site Title
+=============================================== -->
+    <style type="text/css">
+    /*.round-cta { display: block; height: 70px; width: 70px; border-radius: 50%; text-align: center }*/
+
+    .button5 {
+        height: 70px;
+        width: 70px;
+        border: 2px solid rgba(255, 255, 255, 1);
+        text-align: center;
+
+        border-radius: 50%;
+    }
+
+    .button5 span {
+        font-size: 1.5rem;
+    }
+
+    .button5:hover {
+        border: 5px solid rgba(49, 49, 40, 1);
+        transition: all 0.4s;
+    }
+    </style>
+    <div class=" mb-r" style="">
+        <div class="container-fluid flex-center text-center" style="height: 40em">
+            <div id="reveal-bottom">
+                <div class="reveal-left container-fluid">
+                    <!--Section heading-->
+                    <p class="flex-item" style="font-size: 4.5rem;font-weight: 200;"><strong>Get in touch</strong></p>
+                    <h1 class="flex-item section-heading h1 text-muted"><strong><span class="vertical-line "></span></strong></h1>
+                    <div class="flex-item pb-2">
+                        <h2 class="text-center pb-3" style="font-size: 1.8rem;font-weight: bold;"><strong>hello@titombugua.com</strong></h2>
+                    </div>
+                    <!-- <ul class="links" style="list-style: none; text-decoration-line: none; display: inline;">
+                        <li class="link"><a class="round-cta" href="#"> <span class="fa fa-twitter"></span></a></li>
+                        <li class="link"><a class="round-cta" href="#"> <span class="fa fa-twitter"></span></a></li>
+                        <li class="link"><a class="round-cta" href="#"> <span class="fa fa-twitter"></span></a></li>
+                        <li class="link"><a class="round-cta" href="#"> <span class="fa fa-twitter"></span></a></li>
+                        <li class="floatL"><a class="round-cta hover css3Animate" href="" target="_blank"><span class="fa fa-github"></span><span class="css3Animate target"></span></a></li>
+                        <!-- <li class="link"><a class="round-cta" href="#"> <span class="fa fa-instagram"></a></li> -->
+                    <button class="button5" onclick="window.location.href='http://www.twitter.com/tittoix'"><span class="fa fa-twitter"></span></button>
+                    <button class="button5" onclick="window.location.href='http://instagram.com'"><span class="fa fa-instagram"></span></button>
+                    <button class="button5" onclick="window.location.href='http://github.com'"><span class="fa fa-github"></span></button>
+                    <button class="button5" onclick="window.location.href='http://www.linkedin.com'"><span class="fa fa-linkedin"></span></button>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Begin Featured
+    ================================================== -->
+    <!-- End List Posts
+    ================================================== -->
+    <!-- Begin Footer
+    ================================================== -->
+    {%endblock%} {% block footer %} {% endblock %}

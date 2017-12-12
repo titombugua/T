@@ -1,0 +1,80 @@
+
+
+
+
+
+
+/*with great caption for pictures*/
+
+
+
+<div class="col-lg-4 col-sm-6">
+                <div class="cardd-image no-gutter" href="https://s3.us-east-2.amazonaws.com/portfolio96/RandQuoteGen.jpg" alt="the-lens-cap">
+              <img class="img-fluid" src="{{graphic_item.graphic.url}}" alt="the-lens-cap">
+              <div class="container-p">
+                <div class="content p-2">
+                  <h3>{{graphic_item.site_name}}</h3>
+                  
+                    
+                  </div>
+              </div>
+            </div>
+            </div>
+
+
+    /*accompaning css*/
+
+    .cardd-image {
+  position: relative;
+  border: 2px solid #fff;
+  background-position: center;
+  background-size: cover !important;
+  }
+.cardd-image .container-p {
+  display: block;
+  position: relative; 
+  text-align: center;
+  background: transparent;
+  transition: .5s;
+  /*padding: 100px;*/
+}
+.content > h3 {
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  transition: .5s;
+  transform: scale(2);
+  opacity: 0;
+
+}
+.content > p {
+  /*position: absolute;*/
+  color: #fff;
+  font-size: 1.5em;
+  transition: .5s;
+  transform: scale(2);
+  opacity: 0;
+
+}
+
+
+
+
+
+.cardd-image:hover .container-p p {
+  transform: scale(1);
+  opacity: 1;
+}
+.cardd-image:hover .container-p h3 {
+  transform: scale(1);
+  opacity: 1;
+}
+.cardd-image:hover .container-p {
+  background: rgba(0,0,0,0.7);
+}
+
+/*.imgBox:hover img {
+  transform: scale(2) translateX(-50px);
+  opacity: 1;
+}
+*/

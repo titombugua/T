@@ -1,0 +1,117 @@
+<!-- {% load static %}
+<div class="container-fluid">
+<div class="container-fluid bg-3 text-center">
+    <div class="row">   
+        <div class="col-sm-4">
+                <div class="imgBox">
+                    <img src="{{ graphic_item.graphic.url }}">
+                    <div class="container vertical-center">
+                        <div class="content">{{ graphic_item.site_name }}</div>
+                            <p> <a href="{{graphic_item.site_urls}}" class="btn btn-portfolio"> VISIT SITE</a></p>
+                        
+                    </div>
+                </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="center">
+                <div class="imgBox">
+                    <img src="{{ graphic_item_1.graphic.url }}">
+                     <div class="container">
+                        <div class="content">
+                            <h1> {{ graphic_item_1.site_name }}</h1><br>
+                            <p> <a href="{{graphic_item.site_urls}}" class="btn btn-portfolio"> VISIT SITE</a></p>
+
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="center">
+                <div class="imgBox">
+                    <img src="{{ graphic_item_2.graphic.url }}">
+                     <div class="container">
+                        <div class="content">
+                            <h1> {{ graphic_item_2.site_name }}</h1><br>
+                            <p> <a href="{{graphic_item.site_urls}}" class="btn btn-portfolio"> VISIT SITE</a></p>
+
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+ -->
+{% load static %}
+<section id="reveal-bottom" class="section pb-5">
+    <!--Section heading-->
+    <div class="reveal-left container-fluid px-0">
+        <div class="portfolio-h section-title">
+            <h2><span>SOME OF MY PROJECTS</span></h2>
+        </div>
+        <!--Grid row-->
+        <div class="row">
+            <!--Grid column-->
+            <div class="graphic-1 col-sm-4 p-0">
+                <div class="cover-img" style="background-image: url({{graphic_item.graphic.url}});background-size: cover; background-position: center; height: 30rem;">
+                    <div class="cardd-image container-fluid flex-center text-center text-white rgba-black-strongg" style="">
+                        <div class="">
+                            <div class="container-fluid">
+                                <!--Section heading-->
+                                <p class="flex-item font-bold pb-2" style="font-size: 1rem;"><strong><i class="fa fa-pie-chart"></i> {{graphic_item.graphic_category}}</strong></p>
+                                <h3 class="flex-itemm section-heading text-muted pb-2"><strong>{{graphic_item.site_name}}</strong></h3>
+                                <div class="flex-itemm">
+                                    <a class="btn-animated btn btn-outline-gred btn-sm p-2" href="{% url 'web:blog' %}"><i class="fa fa-clone left"></i> VIEW SITE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="graphic-2 col-sm-4 p-0">
+                <div class="cover-img" style="background-image: url({{graphic_item_1.graphic.url}});background-size: cover; background-position: center; height: 30rem;">
+                    <div class="cardd-image container-fluid flex-center text-center text-white rgba-black-strongg" style="">
+                        <div class="">
+                            <div class="container-fluid">
+                                <!--Section heading-->
+                                <p class="flex-item font-bold pb-2" style="font-size: 1rem;"><strong><i class="fa fa-pie-chart"></i> {{graphic_item_1.graphic_category}}</strong></p>
+                                <h3 class="flex-itemm section-heading text-muted pb-2"><strong>{{graphic_item_1.site_name}}</strong></h3>
+                                <div class="flex-itemm">
+                                    <a class="btn btn-outline-gred btn-sm p-2" href="{% url 'web:blog' %}"><i class="fa fa-clone left"></i> VIEW SITE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="graphic-3 col-sm-4 p-0">
+                <div class="cover-img" style="background-image: url({{graphic_item_2.graphic.url}});background-size: cover; background-position: center; height: 30rem;">
+                    <div class="cardd-image container-fluid flex-center text-center text-white rgba-black-strongg" style="">
+                        <div class="">
+                            <div class="container-fluid">
+                                <!--Section heading-->
+                                <p class="flex-item font-bold pb-2" style="font-size: 1rem;"><strong><i class="fa fa-pie-chart"></i> {{graphic_item_2.graphic_category}}</strong></p>
+                                <h3 class="flex-itemm section-heading text-muted pb-2"><strong>{{graphic_item_2.site_name}}</strong></h3>
+                                <div class="flex-itemm">
+                                    <a class="btn btn-outline-gred btn-sm p-2" href="{% url 'web:blog' %}"><i class="fa fa-clone left"></i> VIEW SITE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Grid column-->
+        </div>
+        <!--Grid row-->
+    </div>
+</section>
+<div class="d-flex justify-content-center mb-r">
+    <a class="btn btn-outline-gred btn-lg p-3" href=""><i class="fa fa-clone left"></i> VIEW MORE PROJECTS</a>
+</div>
+<!--Projects section v.4-->

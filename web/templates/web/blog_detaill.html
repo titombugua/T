@@ -1,0 +1,36 @@
+{% extends "web/blog_list.html" %}
+
+{% block content %}
+{% load django_markdown %}
+
+{% block blog_entries %}
+
+      
+<div class="container-fluid p-0">
+<div class="card">
+  <div class="img-fluid" style="background-image: url(https://static.pexels.com/photos/279315/pexels-photo-279315.jpeg); background-size: cover; height: 15rem; background-position: center;">
+          
+
+        </div>
+</div>
+  
+    <div class="card d-lg-flex" style="margin-top: -50px; width:90%; margin-left: 5%; height: 150px">
+        <div class="card-body text-center">
+          <h2 class="card-title"><a>{{ object.blog_title }}</a></h2>
+          <h6 class="card-subtitle mb-2 text-muted">Written on, {{ object.created }}</h6>
+        </div>
+
+  </div>
+
+           <!--Excerpt-->
+<div class="p-5 text-justify" id="blog">
+        {{ object.blog_content|markdown|safe }}
+            </div>
+</div>
+{% endblock %}
+{% endblock%}
+
+
+
+
+

@@ -1,0 +1,234 @@
+{% extends 'blog_list.html' %} {% load static %} {% block content %}
+
+
+<div class="form-style-8 p-3">
+  <form id="story_form" action="" method="post">
+    {% csrf_token %}
+    {{form}}
+   
+    <div>
+      <input class="btn subscribe btn-md" type="submit" value="Submit" />
+    </div><br>
+  </form>
+</div>
+
+
+
+<style type="text/css">
+.form-style-8{
+    font-family: 'Open Sans Condensed', arial, sans;
+    width: 100%px;
+    /*padding: 30px;*/
+    background: #FFFFFF;
+    /*margin: 50px auto;*/
+    /*box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);*/
+
+}
+.form-style-8 h2{
+    background: #4D4D4D;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #797979;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 20px;
+    margin: -30px -30px 30px -30px;
+}
+.form-style-8 input[type="text"],
+.form-style-8 input[type="date"],
+.form-style-8 input[type="datetime"],
+.form-style-8 input[type="email"],
+.form-style-8 input[type="number"],
+.form-style-8 input[type="search"],
+.form-style-8 input[type="time"],
+.form-style-8 input[type="url"],
+.form-style-8 input[type="password"],
+.form-style-8 textarea,
+.form-style-8 select 
+{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    margin-bottom: 10px;
+    font: 16px Arial, Helvetica, sans-serif;
+    height: 45px;
+}
+.form-style-8 textarea{
+    resize:none;
+    width: 100%;
+    min-height: 10rem;
+    overflow: visible;
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<form action="" method="post">
+<div><input type="text" placeholder="Blog Title" id=""><br /></div><br>
+<div><textarea type="textarea" id="" placeholder="What is on your mind?"> </textarea></div><br>
+<div><input id="id_tags" name="tags" type="text" placeholder="Tags eg, Tech Music" /></div><br>
+
+
+<div><input type="radio" name="publish" value="publish"> Publish<br>
+ <div><br>
+          <input class="btn subscribe btn-md" type="submit" value="Submit" />
+        </div><br>
+</p>
+</form> -->
+
+
+
+<!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <fieldset class="module aligned ">
+    
+    
+    
+        <div class="form-row field-blog_title">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_blog_title">Blog title:</label>
+                        
+                            <input class="vTextField" id="id_blog_title" maxlength="100" name="blog_title" type="text" required />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-blog_header">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_blog_header">Blog header:</label>
+                        
+                            <input id="id_blog_header" name="blog_header" type="file" required />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-blog_content">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_blog_content">Blog content:</label>
+                        
+                            
+<div class="django-ckeditor-widget" data-field-id="id_blog_content" style="display: inline-block;">
+    <textarea cols="40" id="id_blog_content" name="blog_content" rows="10" required data-processed="0" data-config="{&quot;width&quot;: 835, &quot;skin&quot;: &quot;moono-lisa&quot;, &quot;language&quot;: &quot;en-us&quot;, &quot;height&quot;: 291, &quot;filebrowserWindowHeight&quot;: 725, &quot;filebrowserWindowWidth&quot;: 940, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar&quot;: [[&quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;], [&quot;NumberedList&quot;, &quot;BulletedList&quot;, &quot;Indent&quot;, &quot;Outdent&quot;, &quot;JustifyLeft&quot;, &quot;JustifyCenter&quot;, &quot;JustifyRight&quot;, &quot;JustifyBlock&quot;, &quot;Blockquote&quot;], [&quot;Image&quot;, &quot;Table&quot;, &quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;, &quot;SectionLink&quot;, &quot;Format&quot;, &quot;Subscript&quot;, &quot;Superscript&quot;, &quot;PageBreak&quot;], [&quot;Undo&quot;, &quot;Redo&quot;], [&quot;Source&quot;], [&quot;Maximize&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]]}" data-external-plugin-resources="[]" data-id="id_blog_content" data-type="ckeditortype"></textarea>
+</div>
+
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-tags">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_tags">Tags:</label>
+                        
+                            <input id="id_tags" name="tags" type="text" />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-slug">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_slug">Slug:</label>
+                        
+                            <input class="vTextField" id="id_slug" maxlength="200" name="slug" type="text" required />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-publish">
+            
+            
+                <div class="checkbox-row">
+                    
+                    
+                        <input checked="checked" id="id_publish" name="publish" type="checkbox" /><label class="vCheckboxLabel" for="id_publish">Publish</label>
+                    
+                    
+                </div>
+            
+        </div>
+       
+    
+</fieldset>
+</div> -->
+{% endblock%}
