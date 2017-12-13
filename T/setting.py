@@ -13,19 +13,9 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 import os
 from dj_database_url import parse as dburl
 import os
-import urlparse
 import psycopg2
 
-# urlparse.uses_netloc.append("postgres")
-# url = urlparse.urlparse(os.environ["DATABASE_URL"])
 
-# conn = psycopg2.connect(
-#     database=url.path[3:],
-#     user=url.username,
-#     password=url.password,
-#     host=url.hostname,
-#     port=url.port
-# )
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
