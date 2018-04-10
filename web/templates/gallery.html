@@ -1,12 +1,45 @@
-<div class="container-fluid">
-    <div class="section-title">
-        <h2><span>GALLERY</span></h2>
-    </div>
-    <div class="row">
-        {% for picture in pictures %}
-        <div class="col-lg-4" style="background-image: url({{picture.picture.url}}); height: 25rem;background-size: cover;
-    background-position: center;">
+<div id="gallery" style="">
+    <div class="container-fluid">
+        <div class="section-title">
+            <h2><span>GALLERY ONE</span></h2>
         </div>
-        {%endfor%}
+        <div class="row">
+            {% for picture in pictures %}
+            <div class="col-lg-3" style="background-image: url({{picture.picture.url}}); height: 25rem;background-size: cover;" ">
+                
+            </div>
+            {%endfor%}
+
+        </div>
     </div>
 </div>
+
+
+
+<!-- <section class="container-fluid ">
+    <div class="section-title ">
+        <h2><span>GALLERY</span></h2>
+    </div>
+    <div class="grid ">
+        <div class="row ">
+            {% for picture in pictures %}
+            <figure class="effect-duke col-sm-1 ">
+                <div class="img col-lg-4 " style="background-image: url({{picture.picture.url}}); height: 25rem;background-size: cover; " ">
+                <figcaption>
+                    <h2>Messy <span>Duke</span></h2>
+                    <p>Duke is very bored. When he looks at the sky, he feels to run.</p>
+                    <a href=" # ">View more</a>
+                </figcaption>
+                </figure>
+                {%endfor%}
+                <figure class="effect-duke ">
+                    <!-- <img src="http://127.0.0.1:8000/T-grid-honeyc.png " alt="img17 " />
+                    <div class="" style="background-image: url(http://127.0.0.1:8000/T-grid-honeyc.png); height: 25rem;background-size: cover; " ">
+                    <figcaption>
+                        <h2>Tito <span>Mbugua</span></h2>
+                        <p>This is supposed to be a caption.</p>
+                        <a href="# ">View more</a>
+                    </figcaption>
+                </figure>
+            </div>
+            </section> -->

@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 from dj_database_url import parse as dburl
-import os
 import psycopg2
 
 

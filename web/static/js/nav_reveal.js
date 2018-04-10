@@ -19,3 +19,5 @@ $('p').html(
     function(i, h) {
         return h.replace(/(Mbugua)/g, '<span class="g-red">$1</span>');
     });
+// dont know how to say it
+$('#contentt').css('background-image', 'url("https://static.pexels.com/photos/257360/pexels-photo-257360.jpeg")');
