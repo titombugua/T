@@ -25,7 +25,6 @@ urlpatterns = [
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 
     url(r'^tinymce/', include("tinymce.urls")),
-    url(r'^markdown/', include("django_markdown.urls")),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
