@@ -93,6 +93,9 @@ ENV/
 # Rope project settings
 .ropeproject
 
-
+#Database env
+.bashrc
+.bashrc.swp
+latest.dump
 
 	
