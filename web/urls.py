@@ -14,6 +14,8 @@ urlpatterns = [
     url(r'^form/$', views.add_story, name='add-story'),
    	url(r'^about-me/$', ListView.as_view(queryset=Resume.objects.all()), name='about-me'),
    		url(r'^contact/$', views.contact, name='contact'),
+   		   		url(r'^resume/$', views.resume, name='resume'),
+
 
 
 	url(r'^blog/$', ListView.as_view(queryset=Blog.objects.published().order_by("-created")), name='blog'),

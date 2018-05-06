@@ -28,6 +28,7 @@ def homepage(request):
 	pictures = Picture.objects.all()
 	# Blog-Preview
 	queryset = Blog.objects.published()[:2]
+	
 	context = {
 		'cover_img': cover_img,
 		'cover_img_1': cover_img_1,
@@ -45,8 +46,8 @@ def homepage(request):
 		'queryset':queryset,
 		}
 	return render(request, 'layout.html', context)
-def base(request):
-	return render(request, 'base.html')
+def resume(request):
+	return render(request, 'resumeSmooth.html')
 def contact(request):
 	return render(request, 'contact_list.html')
 

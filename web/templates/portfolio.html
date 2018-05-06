@@ -47,7 +47,7 @@
 {% load static %}
 <section id="reveal-bottom" class="section pb-5">
     <!--Section heading-->
-    <div class="reveal-left container-fluid px-0">
+    <div class="reveal-left container-fluid" style="padding:50px; ">
         <div class="portfolio-h section-title">
             <h2><span>SOME OF MY PROJECTS</span></h2>
         </div>
@@ -55,12 +55,13 @@
         <div class="row">
             <!--Grid column-->
             <div class="graphic-1 col-sm-4 p-0">
-                <div class="cover-img" style="background-image: url({{graphic_item.graphic.url}});background-size: cover; background-position: center; height: 30rem;">
+                <div class="cover-img" style="background-image: url({{graphic_item.graphic.url}});background-size: cover; background-position: center; width:410px; height: 410px; border: 10px solid #f8f8f8;
+;">
                     <div class="cardd-image container-fluid flex-center text-center text-white rgba-black-strongg" style="">
                         <div class="">
                             <div class="container-fluid">
                                 <!--Section heading-->
-                                <p class="flex-item font-bold letterSpacingBIG pb-3" style="font-size: 1rem;"><strong><i class="{{graphic_item.category_icon}}"></i> {{graphic_item.graphic_category}}</strong></p>
+                                <h3 class="flex-item font-bold letterSpacingBIG pb-3" style="font-size: 1rem;"><strong><i class="{{graphic_item.category_icon}}"></i> {{graphic_item.graphic_category}}</strong></h3>
                                 <h3 class="flex-item upperCase letterSpacingBIG text-muted"><strong>{{graphic_item.site_name}}</strong></h3>
                                 <div class="flex-itemm">
                                     <li class="black-bg p-0">
@@ -74,12 +75,13 @@
             <!--Grid column-->
             <!--Grid column-->
             <div class="graphic-2 col-sm-4 p-0">
-                <div class="cover-img" style="background-image: url({{graphic_item_1.graphic.url}});background-size: cover; background-position: center; height: 30rem;">
+                <div class="cover-img" style="background-image: url({{graphic_item_1.graphic.url}});background-size: cover; background-position: center;width:410px; height: 410px; border: 10px solid #f8f8f8;
+;">
                     <div class="cardd-image container-fluid flex-center text-center text-white rgba-black-strongg" style="">
                         <div class="">
                             <div class="container-fluid">
                                 <!--Section heading-->
-                                <p class="flex-item font-bold letterSpacingBIG pb-3" style="font-size: 1rem;"><strong><i class="{{graphic_item_1.category_icon}}"></i> {{graphic_item_1.graphic_category}}</strong></p>
+                                <h3 class="flex-item font-bold letterSpacingBIG pb-3" style="font-size: 1rem;"><strong><i class="{{graphic_item_1.category_icon}}"></i> {{graphic_item_1.graphic_category}}</strong></h3>
                                 <h3 class="flex-item upperCase letterSpacingBIG text-muted"><strong>{{graphic_item_1.site_name}}</strong></h3>
                                 <div class="flex-itemm">
                                     <li class="black-bg p-0">
@@ -93,12 +95,13 @@
             <!--Grid column-->
             <!--Grid column-->
             <div class="graphic-3 col-sm-4 p-0">
-                <div class="cover-img" style="background-image: url({{graphic_item_2.graphic.url}});background-size: cover; background-position: center; height: 30rem;">
+                <div class="cover-img" style="background-image: url({{graphic_item_2.graphic.url}});background-size: cover; background-position: center; width:410px; height: 410px; border: 10px solid #f8f8f8;
+;">
                     <div class="cardd-image container-fluid flex-center text-center text-white rgba-black-strongg" style="">
                         <div class="">
                             <div class="container-fluid">
                                 <!--Section heading-->
-                                <p class="flex-item font-bold letterSpacingBIG pb-3" style="font-size: 1rem;"><strong><i class="{{graphic_item_2.category_icon}}"></i> {{graphic_item_2.graphic_category}}</strong></p>
+                                <h3 class="flex-item font-bold letterSpacingBIG pb-3" style="font-size: 1rem;"><strong><i class="{{graphic_item_2.category_icon}}"></i> {{graphic_item_2.graphic_category}}</strong></h3>
                                 <h3 class="flex-item upperCase letterSpacingBIG text-muted"><strong>{{graphic_item_2.site_name}}</strong></h3>
                                 <div class="flex-itemm">
                                     <li class="black-bg p-0">
