@@ -1,18 +1,24 @@
 {%load static%}
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <div id="gallery" style="">
-    <div class="container-fluid" style="margin-left: 50px; min-height: 500px;">
+    <div class="container-fluid" style="max-height: 3000px">
         <div class="section-title">
-            <h2><span>GALLERY</span></h2>
+            <h2 class="upperCase letterSpacingMID"><span>GALLERY</span></h2>
         </div>
-        <div class="row">
-            {% for picture in pictures %}
-            <div class="col-lg-2.2" style="background-image: url({{picture.picture.url}}); width: 250px; height: 250px;background-size: cover; background-position: center center; border: 5px solid #f8f8f8;
+        <div class="container">
+            <div class="row">
+                {% for picture in pictures %}
+                <div class="col-sm" style="background-image: url({{picture.picture.url}});background-color:#EEEEEE; height: 250px;background-size: cover; background-position: center center; border: 5px solid #f8f8f8;
 ">
+                </div>
+                {%endfor%}
             </div>
-            {%endfor%}
-
+            <!-- <div class="row">
+                {% for picture in pictures %}
+                <div class="col-lg-2.2" style="background-image: url({{picture.picture.url}});background-color:#EEEEEE; width: 250px; height: 250px;background-size: cover; background-position: center center; border: 5px solid #f8f8f8;
+">
+                </div>
+                {%endfor%}
+            </div> -->
         </div>
     </div>
-</div>
-

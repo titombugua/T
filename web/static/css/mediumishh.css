@@ -2,7 +2,7 @@
 Template Name:Mediumish
 Copyright:WowThemes.net,https://www.wowthemes.net,WOW DEVELOPMENT,Bucharest
 Version:1.0.0
-License:https://www.wowfreebies.net/page/license
+cense:https://www.wowfreebies.net/page/license
 */
 
 body {
@@ -47,13 +47,13 @@ section {
 }
 
 .section-title h2 {
-    color: #EA4335!important;
+    /*color: #EA4335!important;*/
     text-align: center;
     border-bottom: 1px;
-    margin-bottom: 25px;
-    font-weight: 700;
-    font-size: 1.4rem;
-    margin-bottom: 27px;
+    font-size: 18px;
+    font-size: 1.8rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .section-title span {
@@ -61,7 +61,7 @@ section {
     display: inline-block;
     padding-bottom: 20px;
     margin-bottom: -1px;
-    border-color: #EA4335!important;
+    border-color: #000000!important;
 }
 
 
@@ -86,7 +86,7 @@ section {
 }
 
 .listfeaturedtag .wrapthumbnail {
-    height: 258px;
+    height: 268px;
     flex: 0 0 auto;
 }
 
@@ -102,6 +102,7 @@ section {
 
 .listfeaturedtag .thumbnail {
     background-size: cover;
+    background-color: #eeeeee;
     height: 100%;
     display: block;
     background-position: 38% 22% !important;
@@ -162,6 +163,8 @@ section {
 
 .post-top-meta {
     margin-bottom: 2rem;
+        font-weight: 900;
+
 }
 
 .post-top-meta .author-thumb {
@@ -173,16 +176,17 @@ section {
     margin-top: 40px;
 }
 
-.post-top-meta span {
-    font-size: 0.9rem;
+.post-top-meta span  {
+    font-size: 1.5rem;
     color: rgba(0, 0, 0, .44);
     display: inline-block;
+    font-weight: 900;
 }
 
 .post-top-meta .author-description {
     margin-bottom: 5px;
     margin-top: 5px;
-    font-size: 0.95rem;
+    font-size: 1.65rem;
 }
 
 .author-meta {
@@ -201,6 +205,7 @@ span.author-meta {
 span.post-date,
 span.post-read {
     color: rgba(0, 0, 0, .44);
+    font-weight: 700;
 }
 
 span.post-read-more {
@@ -220,7 +225,7 @@ span.post-read-more a:hover {
 }
 
 .dot:after {
-    content: "·";
+    content: " *";
     margin-left: 3px;
     margin-right: 3px;
 }
@@ -306,8 +311,9 @@ span.post-read-more a:hover {
 }
 
 .mainheading h1.posttitle {
-    font-weight: 700;
+    font-weight: 900;
     margin-bottom: 1rem;
+    font-size: 4rem
 }
 
 .footer {
@@ -321,6 +327,7 @@ span.post-read-more a:hover {
 
 .link-dark {
     color: rgba(0, 0, 0, .8);
+    font-size: 2rem;
 }
 
 .article-post {
@@ -466,7 +473,7 @@ ul.tags {
 
 ul.tags li {
     display: inline-block;
-    font-size: 0.9rem;
+    font-size: 1.7rem;
 }
 
 ul.tags li a {
@@ -556,7 +563,7 @@ ul.tags li a:hover {
 
 .alertbar {
     box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, .0785);
-    position: fixed;
+    /*position: fixed;*/
     bottom: 0;
     left: 0;
     background-color: #fff;
@@ -595,7 +602,7 @@ ul.tags li a:hover {
 }
 
 .authorpage .author-description {
-    font-size: 1rem;
+    font-size: 6.5rem;
     color: rgba(0, 0, 0, .6);
 }
 
@@ -683,37 +690,3 @@ ul.tags li a:hover {
 
 
 /*table*/
-
-.table {
-    border-top: 1px solid rgba(49, 49, 49, 0.1);
-    width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: wrap;
-    -ms-flex-flow: wrap;
-    flex-flow: wrap
-}
-
-.skills .intro-b {
-    text-align: center;
-    /*padding: 40px;*/
-    border-bottom: 1px solid rgba(49, 49, 49, 0.1);
-    border-right: 1px solid rgba(49, 49, 49, 0.1)
-}
-
-.skills i {
-    max-width: 280px;
-    width: 100%
-}
-
-.skills p,
-.skills .horizontal-line {
-    text-align: center;
-    /*margin: 20px auto*/
-}
-
-.cl3 {
-    width: 100%
-}

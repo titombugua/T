@@ -1002,7 +1002,9 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 /*portfolio*/
 
-.cover-img {}
+.cover-img {
+    background-color: #eeeeee;
+}
 
 .cardd-image {
     opacity: 0;

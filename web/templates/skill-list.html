@@ -25,14 +25,17 @@
 </section> -->
 {% endblock %}
   <section class="skills overflowHidden ">
-            <h2 class="upperCase letterSpacingMID ">My speciality</h2>
-            <div class="table ">
+            <!-- <h2 class="upperCase letterSpacingMID ">My speciality</h2> -->
+        <div class="section-title">
+            <h2 class="upperCase letterSpacingMID"><span>My speciality</span></h2>
+        </div>
+            <div class="table">
                 {% for item in skill_list %}
                 <div class="intro-b cl3 ">
-                    <i class="{{ item.skill_icon }} pb-5"></i>
+                   <p> <i class="{{ item.skill_icon }} mb-r"></i></p>
                     <h3 class="letterSpacingMID upperCase ">{{ item.skill }}</h3>
                     <span class="horizontal-line "></span>
-                    <p class="letterSpacingSMALL ">{{ item.skill_desc }}</p>
+                    <!-- <p class="letterSpacingSMALL ">{{ item.skill_desc }}</p> -->
                 </div>
                 {% endfor %}
             </div>

@@ -1119,7 +1119,7 @@ p {
 
 .skills {
     text-align: center;
-    border-top: 1px solid rgba(49, 49, 49, 0.1)
+    /*border-top: 1px solid rgba(49, 49, 49, 0.1)*/
 }
 
 .skills h2 {
@@ -1131,6 +1131,8 @@ p {
 
 .skills .table {
     border-top: 1px solid rgba(49, 49, 49, 0.1);
+        border-left: 1px solid rgba(49, 49, 49, 0.1);
+
     width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
@@ -1150,7 +1152,7 @@ p {
 
 .skills img {
     max-width: 280px;
-    width: 100%
+    width: 100%;
 }
 
 .skills p,
@@ -2422,6 +2424,12 @@ html {
 
 .upperCase {
     text-transform: uppercase
+}
+.capitalize {
+    text-transform: capitalize;
+}
+.bold {
+    font-weight: 900;
 }
 
 .vertical-Center {
