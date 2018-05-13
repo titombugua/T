@@ -6,11 +6,10 @@
             <h2 class="upperCase letterSpacingMID"><span>GALLERY</span></h2>
         </div>
         <div class="container">
+            
             <div class="row">
                 {% for picture in pictures %}
-                <div class="col-sm" style="background-image: url({{picture.picture.url}});background-color:#EEEEEE; height: 250px;background-size: cover; background-position: center center; border: 5px solid #f8f8f8;
-">
-                </div>
+                <div class="galleryIMG col-6 col-md-3 " style="background-image: url({{picture.picture.url}});"></div>
                 {%endfor%}
             </div>
             <!-- <div class="row">

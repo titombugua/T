@@ -8,6 +8,9 @@ body {
 
 
 
+
+
+
 /*font for the whole site*/
 
 @font-face {
@@ -42,6 +45,9 @@ li {
 a {
     text-decoration: none !important;
 }
+
+
+
 
 
 
@@ -114,13 +120,13 @@ a {
 
 
 
+
+
+
 /*SCROLL TOP ARROW*/
-
-
 
 .arrow-up .t-top img {
     height: 55px;
-  
 }
 
 @keyframes animate {
@@ -140,6 +146,9 @@ a {
         transform: translateY(-50px);
     }
 }
+
+
+
 
 
 
@@ -196,6 +205,9 @@ a {
 
 
 
+
+
+
 /*Table*/
 
 table {
@@ -232,6 +244,9 @@ td {
     color: #00f;
     border-bottom: solid 1px rgba(255, 25, 255, 0.1);
 }
+
+
+
 
 
 
@@ -516,6 +531,9 @@ td {
 
 
 
+
+
+
 /*ANIMATION*/
 
 @-webkit-keyframes fadeInUp {
@@ -549,6 +567,25 @@ td {
     animation-name: fadeInUp;
 }
 
+
+
+
+/*GALLERY*/
+
+.galleryIMG {
+    background-color: #EEEEEE;
+    height: 250px;
+    background-size: cover;
+    background-position: center center;
+    border: 5px solid #f8f8f8;
+}
+
+@media (max-width:992px) {
+    .galleryIMG {
+        height: 190px;
+        border: 5px solid #f8f8f8;
+    }
+}
 
 
 
@@ -587,6 +624,9 @@ td {
 
 
 
+
+
+
 /*CAROUSEL*/
 
 .carousel .carousel-item {
@@ -597,6 +637,9 @@ td {
     background-position: center center;
     background-size: cover;
 }
+
+
+
 
 
 
@@ -733,6 +776,9 @@ td {
 
 
 
+
+
+
 /*PORTFOLIO CAROUSEL*/
 
 .cardd-image {
@@ -792,6 +838,9 @@ td {
 
 
 
+
+
+
 /*.imgBox:hover img {
   transform: scale(2) translateX(-50px);
   opacity: 1;
@@ -822,6 +871,9 @@ td {
 .carousel-fade .carousel-control {
     z-index: 2;
 }
+
+
+
 
 
 
@@ -865,6 +917,9 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 
 
+
+
+
 /*BUTTONS*/
 
 .btn-carousel,
@@ -890,6 +945,9 @@ now override the 3.3 new styles for modern browsers & apply opacity
     background-color: #EA4335;
     color: #fff !important;
 }
+
+
+
 
 
 
@@ -953,6 +1011,9 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 
 
+
+
+
 /*MASKS*/
 
 .rgba-black-strong {
@@ -972,6 +1033,9 @@ now override the 3.3 new styles for modern browsers & apply opacity
     0,
     .4)!important;
 }
+
+
+
 
 
 
@@ -1000,10 +1064,27 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 
 
+
+
+
 /*portfolio*/
 
 .cover-img {
     background-color: #eeeeee;
+    background-size: cover;
+    background-position: center;
+    height: 390px;
+    border: 10px solid #f8f8f8;
+}
+
+@media (max-width:992px) {
+    .cover-img {
+        background-color: #eeeeee;
+        background-size: cover;
+        background-position: center;
+        height: 290px;
+        border: 10px solid #f8f8f8;
+    }
 }
 
 .cardd-image {
@@ -1057,6 +1138,8 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 
 
+/**/
+
 
 /*cards for map */
 
@@ -1075,12 +1158,18 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 
 
+
+
+
 /*cards for the blogs*/
 
 .card {
     /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
     transition: 0.3s;
 }
+
+
+
 
 
 
@@ -1108,6 +1197,9 @@ a {}
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+
 
 
 
@@ -1272,6 +1364,9 @@ a {}
 
 
 
+
+
+
 /* Common style */
 
 .grid figure {
@@ -1325,6 +1420,9 @@ a {}
 
 
 
+
+
+
 /* Anchor will cover the whole item by default */
 
 
@@ -1356,6 +1454,9 @@ a {}
     letter-spacing: 1px;
     font-size: 68.5%;
 }
+
+
+
 
 
 
@@ -1428,6 +1529,9 @@ figure.effect-duke:hover p {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
 }
+
+
+
 
 
 

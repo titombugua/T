@@ -22,9 +22,9 @@
                             </a>
                         </div>
                         <div class="col-md-7">
-                            <div class="card-block py-4">
+                            <div class="card-block py-5 overflow">
                                 <h2 class="card-title letterSpacingMID"><a href="blog/detail/{{object.id}}/">{{ object.blog_title }}</a></h2>
-                                <h4 class="card-text letterSpacingSMALL">{{ object.blog_content | safe | truncatewords:"25" }}...</h4>
+                                <h4 class="card-text letterSpacingSMALL mb-r">{{ object.blog_content | safe | truncatewords:"25" }}...</h4>
                                 <div class="metafooter">
                                     <div class="wrapfooter">
                                         <span class="meta-footer-thumb">
