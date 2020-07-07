@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.core.urlresolvers import reverse_lazy
+from django.urls import reverse_lazy
 from .models import *
 from .forms import *
 
@@ -13,37 +13,37 @@ def homepage(request):
 	cover_img = CarouselCover.objects.get(slide=0)
 	cover_img_1 = CarouselCover.objects.get(slide=1)
 	cover_img_2	 = CarouselCover.objects.get(slide=2)
-	caption_item = CarouselCaption.objects.get(caption_no=1)
-	caption_item_1 = CarouselCaption.objects.get(caption_no=2)
-	caption_item_2 = CarouselCaption.objects.get(caption_no=3)
-	caption_item_3 = CarouselCaption.objects.get(caption_no=4)
+	# caption_item = CarouselCaption.objects.get(caption_no=1)
+	# caption_item_1 = CarouselCaption.objects.get(caption_no=2)
+	# caption_item_2 = CarouselCaption.objects.get(caption_no=3)
+	# caption_item_3 = CarouselCaption.objects.get(caption_no=4)
 	#About
 	bio_desc = About.objects.order_by('publish_date')[0]
 	#Resume
-	skill_list = Resume.objects.all()
-	# Portfolio
+	# skill_list = Resume.objects.all()
+	# # Portfolio
 	graphic_item = PortfolioGraphic.objects.get(graphic_no=0)
 	graphic_item_1 = PortfolioGraphic.objects.get(graphic_no=1)
 	graphic_item_2 = PortfolioGraphic.objects.get(graphic_no=2)
 	pictures = Picture.objects.all()
-	# Blog-Preview
-	queryset = Blog.objects.published()[:2]
+	# # Blog-Preview
+	# queryset = Blog.objects.published()[:2]
 	
 	context = {
 		'cover_img': cover_img,
 		'cover_img_1': cover_img_1,
 		'cover_img_2': cover_img_2,
-		'caption_item': caption_item,
-		'caption_item_1': caption_item_1,
-		'caption_item_2': caption_item_2,
-		'caption_item_3': caption_item_3,
+		# 'caption_item': caption_item,
+		# 'caption_item_1': caption_item_1,
+		# 'caption_item_2': caption_item_2,
+		# 'caption_item_3': caption_item_3,
 		'bio_desc': bio_desc,
-		'skill_list': skill_list,
+		# 'skill_list': skill_list,
 		'graphic_item': graphic_item,
 		'graphic_item_1': graphic_item_1,
 		'graphic_item_2': graphic_item_2,
 		'pictures':pictures,
-		'queryset':queryset,
+		# 'queryset':queryset,
 		}
 	return render(request, 'layout.html', context)
 def resume(request):

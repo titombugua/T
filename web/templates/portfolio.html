@@ -57,8 +57,7 @@
         <div class="row">
             <!--Grid column-->
             <div class="graphic-1 col-md-4 p-0">
-                <div class="cover-img" style="background-image: url({{graphic_item.graphic.url}});
-;">
+                <div class="cover-img" style="background-image: url({{graphic_item.graphic.url}}); background-size: cover;background-position: center center;">
                     <div class="cardd-image container-fluid flex-center text-center text-white rgba-black-strongg" style="">
                         <div class="">
                             <div class="container-fluid">
@@ -67,7 +66,7 @@
                                 <h3 class="flex-item upperCase letterSpacingBIG text-muted"><strong>{{graphic_item.site_name}}</strong></h3>
                                 <div class="flex-itemm">
                                     <li class="black-bg p-0">
-                                        <a class="cta upperCase letterSpacingBIG hover relative bottomMarginn " href="{% url 'web:blog' %}"><span class="target css3Animate "></span><span><i class=""></i> view site</span></a></li>
+                                        <a class="cta upperCase letterSpacingBIG hover relative bottomMarginn " href="{{graphic_item.site_url}}"><span class="target css3Animate "></span><span><i class=""></i> view site</span></a></li>
                                 </div>
                             </div>
                         </div>
@@ -87,7 +86,7 @@
                                 <h3 class="flex-item upperCase letterSpacingBIG text-muted"><strong>{{graphic_item_1.site_name}}</strong></h3>
                                 <div class="flex-itemm">
                                     <li class="black-bg p-0">
-                                        <a class="cta upperCase letterSpacingBIG hover relative bottomMarginn " href="{% url 'web:blog' %}"><span class="target css3Animate "></span><span><i class=""></i> view site</span></a></li>
+                                        <a class="cta upperCase letterSpacingBIG hover relative bottomMarginn " href="{{graphic_item_1.site_url}}"><span class="target css3Animate "></span><span><i class=""></i> view site</span></a></li>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +106,7 @@
                                 <h3 class="flex-item upperCase letterSpacingBIG text-muted"><strong>{{graphic_item_2.site_name}}</strong></h3>
                                 <div class="flex-itemm">
                                     <li class="black-bg p-0">
-                                        <a class="cta upperCase letterSpacingBIG hover relative bottomMarginn " href="{% url 'web:blog' %}"><span class="target css3Animate "></span><span><i class=""></i> view site</span></a></li>
+                                        <a class="cta upperCase letterSpacingBIG hover relative bottomMarginn " href="{{graphic_item_2.site_url}}"><span class="target css3Animate "></span><span><i class=""></i> view site</span></a></li>
                                 </div>
                             </div>
                         </div>

@@ -5,9 +5,9 @@ from django.db import models
 from django.core.files.storage import FileSystemStorage
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
-from django_markdown.models import MarkdownField
+# from django_markdown.models import MarkdownField
 from django.contrib.postgres.fields import ArrayField
-from tinymce.models import HTMLField
+# from tinymce.models import HTMLField
 
 
 
@@ -54,7 +54,7 @@ class PortfolioGraphic(models.Model):
 		return self.graphic.url
 class Picture(models.Model):
 	picture_name = models.CharField(max_length=100)
-	picture = models.ImageField(storage = fs)
+	picture = models.ImageField(storage = fs, blank=True)
 	picture_url = models.URLField(max_length=100, blank=True)
 	picture_no = models.IntegerField(unique=True, blank=True)
 	upload_date = models.DateTimeField(auto_now=True)

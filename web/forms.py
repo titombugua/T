@@ -1,6 +1,6 @@
 from django.forms import ModelForm, Textarea
 from django import forms
-from tinymce.widgets import TinyMCE
+# from tinymce.widgets import TinyMCE
 from ckeditor.widgets import CKEditorWidget
 from ckeditor.fields import RichTextFormField
 
