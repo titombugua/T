@@ -22,7 +22,7 @@ class BlogAdmin(admin.ModelAdmin):
 	list_display = ('blog_title', 'blog_content','created')
 	prepopulated_fields = {'slug': ('blog_title',)}
 class PictureAdmin(admin.ModelAdmin):
-	list_display = ('picture_name', 'picture_url', 'picture', 'picture_no', 'upload_date')		
+	list_display = ('picture_name', 'picture')		
 
 class TestMAdmin(admin.ModelAdmin):
 	list_display = ('name', 'desc', 'created')

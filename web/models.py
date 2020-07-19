@@ -11,7 +11,7 @@ from django.contrib.postgres.fields import ArrayField
 
 
 
-fs = FileSystemStorage(location='web/media/')
+fs = FileSystemStorage(location='web/media/gallery')
 
 # Create your models here.
 class CarouselCaption(models.Model):
@@ -55,10 +55,7 @@ class PortfolioGraphic(models.Model):
 class Picture(models.Model):
 	picture_name = models.CharField(max_length=100)
 	picture = models.ImageField(storage = fs, blank=True)
-	picture_url = models.URLField(max_length=100, blank=True)
-	picture_no = models.IntegerField(unique=True, blank=True)
-	upload_date = models.DateTimeField(auto_now=True)
-
+	
 	def __str__(self):
 		return self.picture.url
 
