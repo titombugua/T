@@ -97,8 +97,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 't_web',
-        'USER': 't',
-        'PASSWORD': 'ktbffh',
+        'USER': 'postgres',
+        'PASSWORD': 'password',
         'HOST': '',
         'PORT': '',
     }

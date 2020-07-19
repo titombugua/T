@@ -11,7 +11,6 @@ from django.contrib.postgres.fields import ArrayField
 
 
 
-fs = FileSystemStorage(location='web/media/gallery')
 
 # Create your models here.
 class CarouselCaption(models.Model):
@@ -43,7 +42,7 @@ class Resume(models.Model):
 
 class PortfolioGraphic(models.Model):
 	site_name = models.CharField(max_length=100)
-	graphic = models.ImageField(storage = fs)
+	graphic = models.ImageField(upload_to ='portfolio')
 	site_url = models.URLField(max_length=100)
 	graphic_no = models.IntegerField(unique=True)
 	graphic_category = models.CharField(max_length=100)
@@ -54,7 +53,7 @@ class PortfolioGraphic(models.Model):
 		return self.graphic.url
 class Picture(models.Model):
 	picture_name = models.CharField(max_length=100)
-	picture = models.ImageField(storage = fs, blank=True)
+	picture = models.ImageField(upload_to ='gallery', blank=True)
 	
 	def __str__(self):
 		return self.picture.url
@@ -77,7 +76,7 @@ class BlogQuerySet(models.QuerySet):
  
 class Blog(models.Model):
 	blog_title = models.CharField(max_length=100)
-	blog_header = models.ImageField(storage=fs)
+	blog_header = models.ImageField(upload_to ='blog_header')
 	blog_content = RichTextField()
 	tags = ArrayField(models.CharField(max_length=200), blank=True)
 	slug = models.SlugField(max_length=200, unique=True)
