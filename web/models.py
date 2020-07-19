@@ -15,6 +15,7 @@ fs = FileSystemStorage(location='web/media/gallery')
 
 # Create your models here.
 class CarouselCaption(models.Model):
+	id = models.AutoField(primary_key=True)
 	caption = models.CharField(max_length=100)
 	publish_date = models.DateField(auto_now=True)
 	caption_no = models.IntegerField()
@@ -23,6 +24,7 @@ class CarouselCaption(models.Model):
 		return self.caption
 
 class About(models.Model):
+	id = models.AutoField(primary_key=True)
 	description = RichTextField()
 	publish_date = models.DateField(auto_now=True)
 
@@ -32,6 +34,7 @@ class About(models.Model):
 
 
 class Resume(models.Model):
+	id = models.AutoField(primary_key=True)
 	skill_icon = models.CharField(max_length=100)
 	skill = models.CharField(max_length=100)
 	skill_desc = models.CharField(max_length=150)
@@ -42,6 +45,7 @@ class Resume(models.Model):
 		return self.skill
 
 class PortfolioGraphic(models.Model):
+	id = models.AutoField(primary_key=True)
 	site_name = models.CharField(max_length=100)
 	graphic = models.ImageField(storage = fs)
 	site_url = models.URLField(max_length=100)
@@ -53,6 +57,7 @@ class PortfolioGraphic(models.Model):
 	def __str__(self):
 		return self.graphic.url
 class Picture(models.Model):
+	id = models.AutoField(primary_key=True)
 	picture_name = models.CharField(max_length=100)
 	picture = models.ImageField(storage = fs, blank=True)
 	
@@ -61,6 +66,7 @@ class Picture(models.Model):
 
 
 class CarouselCover(models.Model):
+	id = models.AutoField(primary_key=True)
 	alt = models.CharField(max_length=10)
 	cover = models.ImageField(upload_to ='backgrounds')
 	upload_date = models.DateTimeField(auto_now=True)
@@ -76,6 +82,7 @@ class BlogQuerySet(models.QuerySet):
 		return self.blog_title + '-' + self.blog_content + '-' + self.blog_header.url
  
 class Blog(models.Model):
+	id = models.AutoField(primary_key=True)
 	blog_title = models.CharField(max_length=100)
 	blog_header = models.ImageField(storage=fs)
 	blog_content = RichTextField()
@@ -92,6 +99,7 @@ class Blog(models.Model):
 	def get_absolute_url(self):
             return reverse('web:blog-detail', kwargs={'pk':self.pk})
 class Story(models.Model):
+	id = models.AutoField(primary_key=True)
 	story_title = models.CharField(max_length=100)
 	story = models.TextField()
 	written = models.DateTimeField(auto_now=True)
