@@ -49,8 +49,11 @@
                                             <div class="profile-avatr "><img src="{% static 'about/Tito.png' %} " class="rounded-circle " style="margin-top: 0rem; padding: 0; background-color:#fef ; height: 20rem; ">
                                             </div>
                                         </li>
-                                        <li class="">
-                                            <h2 class="font-bold letterSpacingMID" style="font-size: 2rem">{{ bio_desc.description|safe }}</h2></li>
+                                        <li class="h1-intro sectionMargin1 bottomMargin">
+                                                <h2 class="font-bold " style="font-size: 4rem">Hi! <br> I’m <span class="g-red">Julius Mbugua </span>, <br> a Junior backend and aspiring fullstack developer
+                                                    </h2>
+                                            <!-- <h2 class="font-bold letterSpacingMID" style="font-size: 6rem">{{ bio_desc.description|safe }}</h2> -->
+                                        </li>
                                         <section id="section04" class="demo">
                                             <a href="#pre-resume"><span></span></a>
                                         </section>
@@ -85,7 +88,7 @@
         <!-- BLOG -->
         
         <div class="container-fluid mb-r" id="gallery" style="">
-            {% include "gallery.html" %}
+            {% include "contact_list.html" %}
         </div>
         <div class="container-fluid mb-r">
             <div class="arrow-up">
@@ -97,13 +100,13 @@
         <!-- FOOTER -->
         <footer class="container-fluid" style="height: 2rem">
             <div class="text-center">
-                <ul class="links" style="list-style: none; text-decoration-line: none; display: inline;">
+                <!-- <ul class="links" style="list-style: none; text-decoration-line: none; display: inline;">
                     <li class="link"><a href="#" class="fas fa-envelope"></a></li>
-                    <!-- <li class="link "><a href="#" class="fab fa-twitter"></a></li> -->
+                     <li class="link "><a href="#" class="fab fa-twitter"></a></li> -->
                     <!-- <li class="link"><a href="#" class="fab fa-instagram"></a></li> -->
-                    <li class="link"><a href="#" class="fab fa-github"></a></li>
+                    <!-- <li class="link"><a href="#" class="fab fa-github"></a></li> -->
                     <!-- <li class="link"><a href="#" class="fab fa-linkedin"></a></li> -->
-                </ul>
+                </ul> -->
                 <li style="list-style: none;text-decoration-line: none; font-weight: bold;"> &copy; 2020 Tito T Mbugua - Web Design & Development - All Rights Reserved </li>
             </div>
         </footer>
