@@ -1,27 +1,4 @@
-{% extends 'resume_list.html' %} {% load static %}
 
-<body class="{% block body %} blog {% endblock %}">
-    <!-- Begin Nav
-================================================== -->
-    {% block mediumish %}
-    <link href="{% static 'css/mediumishh.css' %}" rel="stylesheet">{% endblock %} {% block nav_bar %}
-    <!-- End Menu -->
-    <!-- Begin Search -->
-    {{block.super}}
-    <!-- <li>
-    <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2 " type="text " placeholder="Search ">
-        <span class="search-icon "><svg class="svgIcon-use " width="25 " height="25 " viewbox="0 0 25 25 "><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z "></path></svg></span>
-    </form>
-</li> -->
-    <!-- End Search -->
-    {%endblock%} {% block card_content %}
-    <!-- End Nav
-================================================== -->
-    <!-- Begin Site Title
-================================================== -->
-    <!-- End Site Title
-=============================================== -->
     <style type="text/css">
     /*.round-cta { display: block; height: 70px; width: 70px; border-radius: 50%; text-align: center }*/
 
@@ -48,12 +25,11 @@
             <div id="reveal-bottom">
                 <div class="reveal-left container-fluid">
                     <!--Section heading-->
-                    <div class="portfolio-h section-title">
+                    <div class=" table portfolio-h section-title">
                         <h2 class="upperCase letterSpacingMID "> <span>Get in touch </span></h2>
                         </div>
-                    <h1 class="flex-item section-heading h1 text-muted"><strong><span class="vertical-line "></span></strong></h1>
                     <!-- form -->
-                    <!-- <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                    <!-- <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch"> -->
                         <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                             <div class="form-row">
                                 <div class="form-group col-md-6">
@@ -82,17 +58,37 @@
                                 <div class="error-message"></div>
                                 <div class="sent-message">Your message has been sent. Thank you!</div>
                             </div>
-                            <div class="text-center"><button type="submit">Send Message</button></div>
+                            <a class="cta upperCase letterSpacingBIG hover relative bottomMargin " href="/contact/ "><span class="target css3Animate "></span><span> Send Message <i class="fas fa-envelop"></i></span></a></li>
+
+                            <!-- <div class="text-center"><button type="submit">Send Message</button></div> -->
                         </form>
-                    </div> -->
+                        <h1 class="flex-item section-heading h1 text-muted"><strong><span class="vertical-line "></span></strong></h1>
+
+                    <!-- </div> -->
 
                 
                     <!-- end  -->
+
+                    <div class="container-fluid bg-1 text-center">
+                        <div id="blog">
+                            <h3 class="margin"> BLOG </h3>
+                            <hr class="border-grey" style="margin:auto;width:20%;color:#000"><br>
+                            <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                {{ form.as_p }}                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button type="submit" class="btn btn-success"> Post</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     
-                    
-                    <div class="flex-item pb-2">
-                        <h2 class="text-center pb-3" style="font-size: 1.8rem;font-weight: bold;"><strong>julzmbugua@gmail.com</strong></h2>
                     </div>
+                    
+                    
+                    <!-- <div class="flex-item pb-2">
+                        <h2 class="text-center pb-3" style="font-size: 1.8rem;font-weight: bold;"><strong>julzmbugua@gmail.com</strong></h2>
+                    </div> -->
                     <!-- <ul class="links" style="list-style: none; text-decoration-line: none; display: inline;">
                         <li class="link"><a class="round-cta" href="#"> <span class="fa fa-twitter"></span></a></li>
                         <li class="link"><a class="round-cta" href="#"> <span class="fa fa-twitter"></span></a></li>
@@ -115,4 +111,4 @@
     ================================================== -->
     <!-- Begin Footer
     ================================================== -->
-    {%endblock%} {% block footer %} {% endblock %}
+    

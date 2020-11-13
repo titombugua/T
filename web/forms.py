@@ -1,5 +1,6 @@
 from django.forms import ModelForm, Textarea
 from django import forms
+from django.core.mail import send_mail, BadHeaderError
 # from tinymce.widgets import TinyMCE
 from ckeditor.widgets import CKEditorWidget
 from ckeditor.fields import RichTextFormField
@@ -16,6 +17,11 @@ class StoryForm(ModelForm):
 }
 		
 
+class ContactForm(forms.Form):
+    subject = forms.CharField(max_length=100)
+    message = forms.CharField(widget=forms.Textarea)
+    sender = forms.EmailField()
+    cc_myself = forms.BooleanField(required=False)
 
 
 
