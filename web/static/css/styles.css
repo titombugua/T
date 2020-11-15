@@ -24,7 +24,7 @@ body {
 
 .cover-img,
 img {
-    filter: grayscale(20);
+    /* filter: grayscale(20); */
 }
 
 .web {
