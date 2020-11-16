@@ -1540,7 +1540,7 @@ figure.effect-duke:hover p {
 
 @media screen and (max-width: 50em) {
     .content {
-        padding: 0 10px;
+        /* padding: 0 10px; */
         text-align: center;
     }
     .grid figure {
