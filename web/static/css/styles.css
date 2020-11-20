@@ -1,6 +1,7 @@
 html,
 body {
     height: 100%;
+    width: 100%;
     transform: rotateZ(0deg) scale(1);
 }
 
@@ -24,7 +25,7 @@ body {
 
 .cover-img,
 img {
-    /* filter: grayscale(20); */
+    filter: grayscale(20);
 }
 
 .web {
@@ -923,7 +924,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 /*BUTTONS*/
 
 .btn-carousel,
-.btn-portfoeelio {
+.btn-portfolio {
     background-color: transparent;
     /* Green */
     color: #fff !important;
