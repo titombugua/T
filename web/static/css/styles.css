@@ -23,8 +23,7 @@ body {
 }
 
 
-.cover-img,
-img {
+.cover-img {
     filter: grayscale(20);
 }
 
@@ -752,7 +751,6 @@ td {
     }
 
 
-    .huge_caption {}
 
     .carousel-portfolio img {
         -webkit-filter: blur(2px);
@@ -788,7 +786,6 @@ td {
     transition: .5s;
 }
 
-.container-p {}
 
 .cardd-image .container-fluid>p {
 
@@ -930,16 +927,10 @@ now override the 3.3 new styles for modern browsers & apply opacity
     color: #fff !important;
     border: solid !important;
     border-color: #fff !important;
-    /*padding: 15px 32px !important;*/
-    ? text-align: center;
+    text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    /*background: transparent !important;
-  font-size: 26px;
-  border-style: solid !important;
-  padding: 18px;
-  color: #fff;*/
 }
 
 .btn:hover {
@@ -1147,7 +1138,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 .carrd {
     width: 50%;
     float: left;
-    /
+    
 }
 
 .card-content {

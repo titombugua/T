@@ -249,11 +249,13 @@ body {
     255,
     .55);
     */
-    /*display: flex;*/
+    display: flex;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    font-size: 1.4rem
+    font-size: 1.4rem;
+    overflow: hidden;
+
 }
 
 sup {
