@@ -20,7 +20,7 @@ def homepage(request):
 	#About
 	bio_desc = About.objects.order_by('publish_date')[0]
 	#Resume
-	# skill_list = Resume.objects.all()
+	skill_list = Resume.objects.all()
 	# # Portfolio
 	graphic_item = PortfolioGraphic.objects.get(graphic_no=0)
 	graphic_item_1 = PortfolioGraphic.objects.get(graphic_no=1)
@@ -38,7 +38,7 @@ def homepage(request):
 		# 'caption_item_2': caption_item_2,
 		# 'caption_item_3': caption_item_3,
 		'bio_desc': bio_desc,
-		# 'skill_list': skill_list,
+		'skill_list': skill_list,
 		'graphic_item': graphic_item,
 		'graphic_item_1': graphic_item_1,
 		'graphic_item_2': graphic_item_2,
@@ -47,7 +47,7 @@ def homepage(request):
 		}
 	return render(request, 'layout.html', context)
 def resume(request):
-	return render(request, 'resumeSmooth.html')
+	return render(request, 'resume_list.html')
 def contact(request):
 	return render(request, 'contact_list.html')
 

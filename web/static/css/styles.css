@@ -21,7 +21,9 @@ body {
     font-weight: normal;
     font-style: normal;
 }
-
+.devicon {
+    font-size: 4rem;
+}
 
 .cover-img {
     filter: grayscale(20);
