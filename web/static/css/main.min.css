@@ -1675,12 +1675,18 @@ html {
 }
 
 @media only screen and (max-width :1440px) {
+    .aboutme-page {
+        padding-top: 50px;
+        height: 150rem;
     .masonry .item {
         width: 33.33333%
     }
 }
 
 @media only screen and (max-width :1100px) {
+    .aboutme-page {
+        padding-top: 50px;
+        height: 150rem;
     h1 {
         font-size: 60px;
         font-size: 6.0rem;
@@ -1873,6 +1879,9 @@ html {
 }
 
 @media only screen and (max-width :670px) {
+    .aboutme-page {
+        padding-top: 50px;
+        height: 150rem;
     .sectionPadding1 {
         padding: 40px 40px 0 40px
     }
