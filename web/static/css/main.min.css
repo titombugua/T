@@ -1656,7 +1656,8 @@ html {
 }
 
 .aboutme-page {
-    padding-top: 50px
+    padding-top: 50px;
+    height: 100rem;
 }
 
 .work-page #wrap {
@@ -1725,6 +1726,9 @@ html {
 }
 
 @media only screen and (max-width :800px) {
+    .aboutme-page {
+        padding-top: 50px;
+        height: 150rem;
     .cl3 {
         width: 50%
     }
