@@ -1,36 +1,5 @@
 @charset "UTF-8";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
 html,
@@ -90,24 +59,17 @@ textarea {
 }
 
 @font-face {
-    font-family: 'Poiret One', cursive;
-    ,
-    241,
-    255,
-    .55);
-    */
-    /*display: flex;*/
+font-family: 'Poiret One', cursive;
 }
 
 
 [data-icon]:before {
     font-family: 'Poiret One', cursive;
-    -icon);
     font-style: normal!important;
     font-weight: normal!important;
     font-variant: normal!important;
     text-transform: none!important;
-    speak: none;
+    speak-as: none;
     line-height: 1
 }
 
@@ -190,19 +152,17 @@ textarea {
 .latinModern {
     font-family: 'Poiret One', cursive;
     font-style: normal;
-    font-weight: 500
+    font-weight: 500;
 }
 
 .brandon-Bold {
     font-family: 'Poiret One', cursive;
-    ;
     font-style: normal;
-    font-weight: 700
+    font-weight: 700;
 }
 
 .brandon-Medium {
     font-family: 'Poiret One', cursive;
-    ;
     font-style: normal;
     font-weight: 500
 }
@@ -1678,6 +1638,7 @@ html {
     .aboutme-page {
         padding-top: 50px;
         height: 150rem;
+    }
     .masonry .item {
         width: 33.33333%
     }

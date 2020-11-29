@@ -1,11 +1,13 @@
-from django.shortcuts import render
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse, HttpResponseRedirect
+
+from django.shortcuts import render, redirect
 from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import *
 from .forms import *
 
-from django.http import HttpResponseRedirect
 
 
 def homepage(request):
@@ -28,7 +30,24 @@ def homepage(request):
 	pictures = Picture.objects.all()
 	# # Blog-Preview
 	# queryset = Blog.objects.published()[:2]
-	
+	# Email Form
+	if request.method == 'GET':
+		form = ContactForm()
+	else:
+		form = ContactForm(request.POST)
+		if form.is_valid():
+			name = form.cleaned_data['name']
+			subject = form.cleaned_data['subject']
+			from_email = form.cleaned_data['from_email']
+			comment = form.cleaned_data['comment']
+			message= name + " with the email, " + from_email + ", sent the following message:\n\n" + comment;
+
+			try:
+				send_mail(subject, message, from_email, ['julzmbugua@gmail.com'])
+			except BadHeaderError:
+				return HttpResponse('Invalid header found.')
+			return redirect('web:thanks')
+	# end
 	context = {
 		'cover_img': cover_img,
 		'cover_img_1': cover_img_1,
@@ -43,8 +62,11 @@ def homepage(request):
 		'graphic_item_1': graphic_item_1,
 		'graphic_item_2': graphic_item_2,
 		'pictures':pictures,
-		# 'queryset':queryset,
+		'form':form,
 		}
+	
+
+	
 	return render(request, 'layout.html', context)
 def resume(request):
 	return render(request, 'resume_list.html')
@@ -85,20 +107,21 @@ def add_story(request):
 	return render(request, 'bf.html', {'form': form})
 
 def contactView(request):
-    if request.method == 'GET':
-        form = ContactForm()
-    else:
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            subject = form.cleaned_data['subject']
-            from_email = form.cleaned_data['from_email']
-            message = form.cleaned_data['message']
-            try:
-                send_mail(subject, message, from_email, ['julesmbugua@gmail.com'])
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
-            return redirect('success')
-    return render(request, 'contact_list.html', {'form': form})
+	if request.method == 'GET':
+		form = ContactForm()
+	else:
+		form = ContactForm(request.POST)
+		if form.is_valid():
+			name = form.cleaned_data['name']
+			subject = form.cleaned_data['subject']
+			email = form.cleaned_data['email']
+			message = form.cleaned_data['message']
+			try:
+				send_mail(subject, message, email, ['julzmbugua@gmail.com'])
+			except BadHeaderError:
+				return HttpResponse('Invalid header found.')
+			return redirect('success')
+	return render(request, 'layout.html', {'form': form})
 
 def successView(request):
     return HttpResponse('Success! Thank you for your message.')

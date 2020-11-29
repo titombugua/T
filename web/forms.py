@@ -18,10 +18,10 @@ class StoryForm(ModelForm):
 		
 
 class ContactForm(forms.Form):
-    subject = forms.CharField(max_length=100)
-    message = forms.CharField(widget=forms.Textarea)
-    sender = forms.EmailField()
-    cc_myself = forms.BooleanField(required=False)
+	name = forms.CharField(max_length=50)
+	from_email = forms.EmailField(required=True)
+	subject = forms.CharField(max_length=100)
+	comment = forms.CharField(widget=forms.Textarea)
 
 
 

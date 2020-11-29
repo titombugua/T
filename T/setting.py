@@ -26,7 +26,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = config('SECRET_KEY')
-SECRET_KEY = '%+6&1@&e2e$_q&4t=jms@5wb)vge0)xk$jdg_gf#%su3@j1d9@'
+SECRET_KEY = os.environ['SECRET_KEY']
+
+# SECRET_KEY = '%+6&1@&e2e$_q&4t=jms@5wb)vge0)xk$jdg_gf#%su3@j1d9@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -60,6 +62,15 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
 ]
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'julzmbugua@gmail.com'
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
+
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 
 ROOT_URLCONF = 'T.urls'
 

@@ -32,7 +32,7 @@
             <div class="table">
                 {% for item in skill_list %}
                 <div class="col-6 col-md-3 intro-b cl3 ">
-                   <p> <i class="devicon {{ item.skill_icon }} mb-r"></i></p>
+                   <p> <i class="{{ item.skill_icon }} mb-r"></i></p>
                     <h5 class="letterSpacingMID upperCase ">{{ item.skill }}</h5>
                     <span class="horizontal-line "></span>
                     <!-- <p class="letterSpacingSMALL ">{{ item.skill_desc }}</p> -->

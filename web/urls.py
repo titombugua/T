@@ -13,8 +13,13 @@ urlpatterns = [
 	url(r'^$', views.homepage, name='homepage'),
     url(r'^form/$', views.add_story, name='add-story'),
    	url(r'^about-me/$', ListView.as_view(queryset=Resume.objects.all()), name='about-me'),
-   		url(r'^contact/$', views.contact, name='contact'),
-   		   		url(r'^resume/$', views.resume, name='resume'),
+   	# url(r'^$', views.contactView, name='contact'),
+	url(r'^thanks/$', views.successView, name='thanks'),
+
+
+   	url(r'^resume/$', views.resume, name='resume'),
+	
+	
 
 
 
