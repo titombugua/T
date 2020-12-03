@@ -145,7 +145,7 @@
                                             <div class="sent-message">Your message has been sent. Thank you!</div>
                                         </div>
                                         <div class="form-actions">
-                                            <button type="submit" class="cta upperCase letterSpacingBIG hover relative bottomMargin " type="submit" href="{% url 'web:thanks' %}/ "><span class="target css3Animate "></span><span> Send Message <i class="fas fa-envelope"></i></span></button>
+                                            <a type="submit" class="cta upperCase letterSpacingBIG hover relative bottomMargin " type="submit" href="{% url 'web:thanks' %}/ "><span class="target css3Animate "></span><span> Send Message <i class="fas fa-envelope"></i></span></a>
                                         </div>
                                     </form>
                                 <!-- end  -->
@@ -154,43 +154,9 @@
 
 
 
-                                <!-- <form action="" method="post">
-                                    {% csrf_token %}
-
-                                    <ul class="contactList">
-                                        <li id="name" class="contact"> {{form.name.label_tag}} {{ form.name }}</li>
-                                        <li id="email" class="contact">{{ form.email.label_tag }}{{ form.email }}</li>
-                                        <li id="subject" class="contact">{{ form.subject.label_tag }}{{ form.subject}}</li>
-                                        <li id="message" class="contact">{{ form.message.label_tag }}{{ form.message}}</li>
-                                    </ul>
-                                                                                                    
-                                    <div class="form-actions">
-                                        <button type="submit" class="cta upperCase letterSpacingBIG hover relative bottomMargin " type="submit" href="{% url 'web:thanks' %}/ "><span class="target css3Animate "></span><span> Send Message <i class="fas fa-envelope"></i></span></button>
-                                    </div>
-                                </form> -->
+                            
                         
                         </div>
-                        <style type="text/css">
-                            /*.round-cta { display: block; height: 70px; width: 70px; border-radius: 50%; text-align: center }*/
-                        
-                            .button5 {
-                                height: 70px;
-                                width: 70px;
-                                border: 2px solid rgba(255, 255, 255, 1);
-                                text-align: center;
-                        
-                                border-radius: 50%;
-                            }
-                        
-                            .button5 span {
-                                font-size: 1.5rem;
-                            }
-                        
-                            .button5:hover {
-                                border: 5px solid rgba(49, 49, 40, 1);
-                                transition: all 0.4s;
-                            }
-                        </style>
                         
                         <ul>
                             <button class="button5" onclick="window.location.href='http://www.twitter.com/tittoix'"><span class="fab fa-twitter"></span></button>
@@ -209,26 +175,21 @@
         ================================================== -->
         
 
-        <div class="container-fluid mb-r">
-            <div class="arrow-up">
-                <a href="#home" class="t-top"><img src="{% static 'up-arroww.png' %} " id="up-btn" class="float-right"></a>
-            </div>
-        </div>
-        <!--  -->
-        <!-- /.container -->
+       
         <!-- FOOTER -->
-        <footer class="container-fluid" style="height: 2rem">
-            <div class="text-center">
-                <!-- <ul class="links" style="list-style: none; text-decoration-line: none; display: inline;">
-                    <li class="link"><a href="#" class="fas fa-envelope"></a></li>
-                     <li class="link "><a href="#" class="fab fa-twitter"></a></li> -->
-                    <!-- <li class="link"><a href="#" class="fab fa-instagram"></a></li> -->
-                    <!-- <li class="link"><a href="#" class="fab fa-github"></a></li> -->
-                    <!-- <li class="link"><a href="#" class="fab fa-linkedin"></a></li> -->
+        <footer class="container-fluid text-center" >
+            
+            <div class="text-center" style="height: 2rem">              
                 
-                <li style="list-style: none;text-decoration-line: none; font-weight: bold;"> &copy; 2020  Created by Julius Mbugua </li>
+                <li style="list-style: none; align-items:center;text-decoration-line: none; font-weight: bold;"> &copy; 2020 </li>
             </div>
         </footer>
+        <!-- <div class="container-fluid"> -->
+        <div class="arrow-up">
+            <a href="#home" class="t-top"><img src="{% static 'up-arroww.png' %} " id="up-btn" class="float-right"></a>
+        </div>
+           
+        <!-- </div> -->
     </body>
 
 </html>
