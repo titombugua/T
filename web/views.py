@@ -1,5 +1,7 @@
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib.messages import constants as messages
+
 
 from django.shortcuts import render, redirect
 from django.views.generic import DetailView
@@ -46,7 +48,13 @@ def homepage(request):
 				send_mail(subject, message, from_email, ['julzmbugua@gmail.com'])
 			except BadHeaderError:
 				return HttpResponse('Invalid header found.')
-			return redirect('web:thanks')
+
+			# messages.success(request, 'Thank you for your subscription.')
+			# messages.add_message(request, messages.SUCCESS, 'Thanks for your message!.')
+
+
+			return HttpResponseRedirect('/thanks/')
+
 	# end
 	context = {
 		'cover_img': cover_img,
@@ -106,22 +114,22 @@ def add_story(request):
 		form = StoryForm()
 	return render(request, 'bf.html', {'form': form})
 
-def contactView(request):
-	if request.method == 'GET':
-		form = ContactForm()
-	else:
-		form = ContactForm(request.POST)
-		if form.is_valid():
-			name = form.cleaned_data['name']
-			subject = form.cleaned_data['subject']
-			email = form.cleaned_data['email']
-			message = form.cleaned_data['message']
-			try:
-				send_mail(subject, message, email, ['julzmbugua@gmail.com'])
-			except BadHeaderError:
-				return HttpResponse('Invalid header found.')
-			return redirect('success')
-	return render(request, 'layout.html', {'form': form})
+# def contactView(request):
+# 	if request.method == 'GET':
+# 		form = ContactForm()
+# 	else:
+# 		form = ContactForm(request.POST)
+# 		if form.is_valid():
+# 			name = form.cleaned_data['name']
+# 			subject = form.cleaned_data['subject']
+# 			email = form.cleaned_data['email']
+# 			message = form.cleaned_data['message']
+# 			try:
+# 				send_mail(subject, message, email, ['julzmbugua@gmail.com'])
+# 			except BadHeaderError:
+# 				return HttpResponse('Invalid header found.')
+# 			return redirect('success')
+# 	return render(request, 'layout.html', {'form': form})
 
 def successView(request):
     return HttpResponse('Success! Thank you for your message.')

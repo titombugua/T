@@ -112,8 +112,20 @@
                                 <!-- <hr class="border-grey" style="margin:auto;width:20%;color:#000"><br> -->
                                 <!-- Test -->
                                 <div class="card-form col-lg-6 d-flex align-items-center">
+
+                                    <form method="post">
+                                        <!-- <input type="submit" name="" value="submit"> -->
+                                    </form>
+
+
+
                                     <form action="" method="post" role="form" class="php-email-form">
                                         {% csrf_token %}
+
+
+                                        
+
+
 
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
@@ -139,16 +151,20 @@
                                             <textarea class="form-control" name="comment" id="{{form.comment.id_comment}}"></textarea>
                                             <div class="validate"></div>
                                         </div>
+                                        
                                         <div class="mb-3">
                                             <div class="loading">Loading</div>
                                             <div class="error-message"></div>
-                                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                                            <div class="sent-message">{{messages}} Your message has been sent. Thank you!</div>
                                         </div>
                                         <div class="form-actions">
-                                            <a type="submit" class="cta upperCase letterSpacingBIG hover relative bottomMargin " type="submit" href="{% url 'web:thanks' %}/ "><span class="target css3Animate "></span><span> Send Message <i class="fas fa-envelope"></i></span></a>
+                                          <!-- <a type="submit" class="cta upperCase letterSpacingBIG hover relative bottomMargin " name="" value="submit"><span class="target css3Animate "></span><span> Send Message <i class="fas fa-envelope"></i></span</a> -->
+
+                                            <button type="submit" value="Submit" class="cta upperCase letterSpacingBIG hover relative bottomMargin " name=""><span class="target css3Animate "></span><span> Send Message <i class="fas fa-envelope"></i></span></button>
                                         </div>
                                     </form>
-                                <!-- end  -->
+                                <!-- end  -->                                      
+
 
 
 
