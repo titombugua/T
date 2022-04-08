@@ -208,7 +208,13 @@ body {
     241,
     255,
     .55);
-    */
+    */.round-cta {
+        display: block;
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        text-align: center
+    }
     display: flex;
     font-style: normal;
     font-weight: 400;
@@ -488,7 +494,7 @@ p {
     border: 3px solid rgba(255, 255, 255, 1)
 }
 
-.black-bg .vertical-line,
+main.black-bg .vertical-line,
 .white-bg .horizontal-line,
 .white-bg .lineBreak {
     background: #313131
@@ -512,7 +518,7 @@ p {
 }
 
 .black-bg .round-cta.hover:hover .target {
-    border: 5px solid rgba(255, 255, 255, 1)
+    border: 5px solid rgba(255, 25logo5, 255, 1)
 }
 
 .white-bg>.lightNav a>.line {
@@ -1887,7 +1893,7 @@ html {
         width: 30px
     }
     .mainNav .logo .icon-logo {
-        width: 30px
+        width: 30px;
     }
     .mainNav .logo .target {
         border: 0;
